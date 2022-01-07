@@ -44,7 +44,7 @@ namespace EmployeePayrollMultiThreading
         }
         public void Add()
         {
-            EmployeeModel model = new EmployeeModel();
+            EmployeeModel1 model = new EmployeeModel1();
             model.EmployeeName = "Ram";
             model.BasicPay = 6000;
             model.PhoneNumber = "7976688";
@@ -58,7 +58,7 @@ namespace EmployeePayrollMultiThreading
 
 
         }
-        public bool AddEmployee(EmployeeModel model)
+        public bool AddEmployee(EmployeeModel1 model)
         {
             try
             {

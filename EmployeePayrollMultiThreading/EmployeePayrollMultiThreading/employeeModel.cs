@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeePayrollMultiThreading
 {
-    public class EmployeeModel
+    public class EmployeeModel1
     {
         public int EmployeeID { get; set; }
         public string EmployeeName { get; set; }
