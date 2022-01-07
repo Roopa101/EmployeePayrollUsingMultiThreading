@@ -11,6 +11,7 @@ namespace EmployeePayrollTest
         [TestMethod]
         public void Given10Employee_WhenAddedToList_ShouldMatchEmployeeEntries()
         {
+
             List<EmployeeDetails> employeeDetails = new List<EmployeeDetails>();
             employeeDetails.Add(new EmployeeDetails(EmployeeID: 1, EmployeeName: "Bruce", PhoneNumber: "9999999999", Address: "xyz", Department: "HR", Gender: 'M', City: "abc", BasicPay: 100, TaxablePay: 2, Tax: 3, Country: "India"));
             employeeDetails.Add(new EmployeeDetails(EmployeeID: 2, EmployeeName: "Banner", PhoneNumber: "9999999999", Address: "xyz", Department: "HR", Gender: 'M', City: "abc", BasicPay: 100, TaxablePay: 2, Tax: 3, Country: "India"));
@@ -27,7 +28,13 @@ namespace EmployeePayrollTest
             DateTime stopDateTime = DateTime.Now;
             Console.WriteLine("Duration without thread: " + (stopDateTime - startDateTime));
 
+            DateTime startDateTimeThread = DateTime.Now;
+            employeePayrollOperations.addEmployeeToPayrollWithThread(employeeDetails);
+            DateTime stopDateTimeThread = DateTime.Now;
+            Console.WriteLine("Duration with thread: " + (stopDateTimeThread - startDateTimeThread));
+            //Assert.AreNotEqual(v1,v2);
         }
     }
+
 
 }
